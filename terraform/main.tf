@@ -109,7 +109,7 @@ resource "aws_instance" "montapp-server" {
   }
 }
 
-output "ec2-public_ip" {
+output "ec2_public_ip" {
   value = aws_instance.montapp-server.public_ip
 }
 
