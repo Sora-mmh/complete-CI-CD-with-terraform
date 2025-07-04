@@ -79,15 +79,14 @@ pipeline {
       }
     }               
   }
-}
 
-post {
+  post {
     always {
       script {
-        echo "Cleaning up Terraform resources..."
-        dir('terraform') {
-          sh "terraform destroy -auto-approve || true"  // `|| true` prevents failure if destroy fails
-        }
+	echo "Cleaning up Terraform resources..."
+	dir('terraform') {
+	  sh "terraform destroy -auto-approve || true"  // `|| true` prevents failure if destroy fails
+	}
       }
     }
   }
