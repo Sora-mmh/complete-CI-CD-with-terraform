@@ -33,7 +33,10 @@ pipeline {
       }
     }
     stage ("provision server") {
-        // tf provision server
+      // tf provision server
+      steps {
+	
+      }	
     }
     stage("deploy") {
       steps {
