@@ -5,7 +5,7 @@ library identifier: 'jenkins-shared-library@master', retriever: modernSCM(
 	remote: 'https://github.com/Sora-mmh/jenkins-shared-library.git',
 	credentialsId: 'github-credentials'])
 
-@Library('jenkins-shared-library@master')_
+// @Library('jenkins-shared-library@master')_
 
 pipeline {   
   agent any
