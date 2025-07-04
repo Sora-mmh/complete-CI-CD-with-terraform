@@ -5,7 +5,7 @@
 //	remote: 'https://github.com/Sora-mmh/jenkins-shared-library.git',
 //	credentialsId: 'github-credentials'])
 
-@Library('jenkins-shared-library')_
+@Library('jenkins-shared-library@master')_
 
 pipeline {   
   agent any
