@@ -1,11 +1,12 @@
-//terraform {
-//  required_version = ">= 0.12"
-//  backend "s3" {
-//    bucket = "montapp-tf-s3-bucket"
-//    key = "montapp/state.tfstate"
-//    region = "eu-north-1"
-//  }
-//}
+// define the remote storage where terraform remote state will be stored
+terraform {
+  required_version = ">= 0.12"
+  backend "s3" {
+    bucket = "montapp-tf-s3-bucket"
+    key = "montapp/state.tfstate"
+    region = "eu-north-1"
+  }
+}
 
 provider "aws" {
   region = var.region
