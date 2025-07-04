@@ -27,7 +27,7 @@ resource "aws_subnet" "montapp-subnet-1" {
   }
 }
 
-resource "aws_internet_gateway" "montaapp-igw" {
+resource "aws_internet_gateway" "montapp-igw" {
   vpc_id = aws_vpc.montapp-vpc.id
   tags = {
     Name: "${var.env_prefix}-igw"
@@ -89,11 +89,11 @@ data "aws_ami" "latest-amazon-linux-image" {
   }
 }
 
-resource "aws_instance" "montaapp-server" {
+resource "aws_instance" "montapp-server" {
   ami = data.aws_ami.latest-amazon-linux-image.id
   instance_type = var.instance_type
 
-  subnet_id = aws_subnet.montaapp-subnet-1.id
+  subnet_id = aws_subnet.montapp-subnet-1.id
   vpc_security_group_ids = [aws_default_security_group.default-sg.id]
   availability_zone = var.avail_zone
 
