@@ -39,7 +39,7 @@ resource "aws_default_route_table" "main-rtb" {
 
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = aws_internet_gateway.myapp-igw.id
+    gateway_id = aws_internet_gateway.montapp-igw.id
   }
   tags = {
     Name: "${var.env_prefix}-main-rtb"
@@ -47,7 +47,7 @@ resource "aws_default_route_table" "main-rtb" {
 }
 
 resource "aws_default_security_group" "default-sg" {
-  vpc_id = aws_vpc.myapp-vpc.id
+  vpc_id = aws_vpc.montapp-vpc.id
 
   ingress {
     from_port = 22
